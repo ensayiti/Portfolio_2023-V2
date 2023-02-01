@@ -1,31 +1,76 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, OverlayTrigger, Tooltip } from "react-bootstrap";
 import {
-  SiLinux,
   SiVisualstudiocode,
-  SiPostman,
-  SiHeroku,
+  SiUbuntu,
+  SiNetlify,
   SiVercel,
+  SiFigma,
 } from "react-icons/si";
 
 function Toolstack() {
+  // Tooltip
+  const renderTolltipUbuntu = (props) => (
+    <Tooltip id="ubuntu" {...props}>
+      Linux - Ubuntu
+    </Tooltip>
+  )
+  const renderTolltipVS = (props) => (
+    <Tooltip id="vscode" {...props}>
+      Microsoft Visual Studio Code
+    </Tooltip>
+  )
+  const renderTolltipNetlify = (props) => (
+    <Tooltip id="netlify" {...props}>
+      Netlify
+    </Tooltip>
+  )
+  const renderTolltipVercel = (props) => (
+    <Tooltip id="vercel" {...props}>
+      Vercel
+    </Tooltip>
+  )
+  const renderTolltipFigma = (props) => (
+    <Tooltip id="figma" {...props}>
+      Figma
+    </Tooltip>
+  )
+
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+
+      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipUbuntu} id="ubuntu">
       <Col xs={4} md={2} className="tech-icons">
-        <SiLinux />
+        <SiUbuntu/>
       </Col>
+      </OverlayTrigger>
+
+      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipVS} id="vscode">
       <Col xs={4} md={2} className="tech-icons">
         <SiVisualstudiocode />
       </Col>
+      </OverlayTrigger>
+
+      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipNetlify} id="netlify">
       <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
+        <SiNetlify />
       </Col>
+      </OverlayTrigger>
+
+      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipVercel} id="vercel">
       <Col xs={4} md={2} className="tech-icons">
         <SiVercel />
       </Col>
+      </OverlayTrigger>
+
+      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipFigma} id="figma">
       <Col xs={4} md={2} className="tech-icons">
-        <SiHeroku />
+        <SiFigma />
       </Col>
+      </OverlayTrigger>
+
+
     </Row>
   );
 }
