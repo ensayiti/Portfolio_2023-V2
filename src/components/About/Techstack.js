@@ -1,19 +1,16 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { Col, Row, OverlayTrigger, Tooltip, } from "react-bootstrap";
-// import { CgCPlusPlus } from "react-icons/cg";
 import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiLaravel,
-  DiBootstrap,
-  DiGit,
-} from "react-icons/di";
-import {
-  SiLess,
+  SiJavascript,
+  SiNodedotjs,
+  SiReact,
   SiNextdotjs,
   SiTailwindcss,
   SiMysql,
+  SiVuedotjs,
+  SiMaterialui,
+  SiChakraui,
+  SiBootstrap,
 } from "react-icons/si";
 
 
@@ -39,9 +36,9 @@ function Techstack() {
       React.js
     </Tooltip>
   )
-  const renderTolltipLaravel = (props) => (
-    <Tooltip id="laravel" {...props}>
-      Laravel
+  const renderTolltipVue = (props) => (
+    <Tooltip id="vue" {...props}>
+      Vue
     </Tooltip>
   )
   const renderTolltipTailwind = (props) => (
@@ -49,14 +46,14 @@ function Techstack() {
       Tailwind
     </Tooltip>
   )
-  const renderTolltipGit = (props) => (
-    <Tooltip id="git" {...props}>
-      Git
+  const renderTolltipMaterialUI = (props) => (
+    <Tooltip id="tailwindcss" {...props}>
+      Material-UI
     </Tooltip>
   )
-  const renderTolltipLess = (props) => (
-    <Tooltip id="less" {...props}>
-      LESS
+  const renderTolltipChakraUI = (props) => (
+    <Tooltip id="tailwindcss" {...props}>
+      Chakra-UI
     </Tooltip>
   )
   const renderTolltipBootstrap = (props) => (
@@ -76,13 +73,13 @@ function Techstack() {
       
       <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipJS} id="javascript">
       <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
+        <SiJavascript />
       </Col>
       </OverlayTrigger>
       
       <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipNode} id="nodejs">
       <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
+        <SiNodedotjs />
       </Col>
       </OverlayTrigger>
 
@@ -94,13 +91,13 @@ function Techstack() {
 
       <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipReact} id="react">
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <SiReact />
       </Col>
       </OverlayTrigger>
 
-      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipLaravel} id="laravel">
+      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipVue} id="vue">
       <Col xs={4} md={2} className="tech-icons">
-        <DiLaravel />
+        <SiVuedotjs />
       </Col>
       </OverlayTrigger>
 
@@ -110,21 +107,21 @@ function Techstack() {
       </Col>
       </OverlayTrigger>
 
-      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipGit} id="git">
+      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipMaterialUI} id="material">
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <SiMaterialui/>
       </Col>
       </OverlayTrigger>
 
-      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipLess} id="less">
+      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipChakraUI} id="chakra">
       <Col xs={4} md={2} className="tech-icons">
-        <SiLess />
+        <SiChakraui/>
       </Col>
       </OverlayTrigger>
 
       <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipBootstrap} id="bootstrap">
       <Col xs={4} md={2} className="tech-icons">
-        <DiBootstrap />
+        <SiBootstrap />
       </Col>
       </OverlayTrigger>
 

@@ -6,6 +6,7 @@ import {
   SiNetlify,
   SiVercel,
   SiFigma,
+  SiGit,
 } from "react-icons/si";
 
 function Toolstack() {
@@ -18,6 +19,11 @@ function Toolstack() {
   const renderTolltipVS = (props) => (
     <Tooltip id="vscode" {...props}>
       Microsoft Visual Studio Code
+    </Tooltip>
+  )
+  const renderTolltipGit = (props) => (
+    <Tooltip id="git" {...props}>
+      Git
     </Tooltip>
   )
   const renderTolltipNetlify = (props) => (
@@ -49,6 +55,12 @@ function Toolstack() {
       <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipVS} id="vscode">
       <Col xs={4} md={2} className="tech-icons">
         <SiVisualstudiocode />
+      </Col>
+      </OverlayTrigger>
+
+      <OverlayTrigger placement="top" delay={{ show: 200, hide: 400 }} overlay={renderTolltipGit} id="git">
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGit />
       </Col>
       </OverlayTrigger>
 
